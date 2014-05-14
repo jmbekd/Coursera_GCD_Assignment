@@ -60,7 +60,7 @@ The time derivative of the acceleration and gyroscope signals are denoted by the
 
 The text "mean" and "std" in the column label indicates whether the measurement is the "mean" or the "standard deviation" of the collected data and the text "xdirection", "ydirection", and "zdirection" indicate which of the triaxial signals ("X", "Y", or "Z") the data came from.
 
-As an example, the column labeled timegravityaccelerationmeanzdirection indicates that it is the "mean" of the "time domain signal" derived from the "gravity acceleration" in the "z axial direction". The column labeled frequencybodygyrojerkmagnitudestd indicates that it is the "standard deviation" of the "frequency domain signal" derived from the "body signal" from the "gyroscope"; to generate the signal in this column, the time derivative of the angular velocity was calculated ("jerk") and used to calculate the "magnitude" of the jerk signal.
+As an example, the column labeled "timegravityaccelerationmeanzdirection" indicates that it is the "mean" of the "time domain signal" derived from the "gravity acceleration" in the "z axial direction". The column labeled "frequencybodygyrojerkmagnitudestd" indicates that it is the "standard deviation" of the "frequency domain signal" derived from the "body signal" from the "gyroscope"; to generate the signal in this column, the time derivative of the angular velocity was calculated ("jerk") and used to calculate the "magnitude" of the jerk signal.
 
 
 
