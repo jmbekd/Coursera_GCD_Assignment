@@ -42,30 +42,3 @@ The instructions stated "Extracts only the measurements on the mean and standard
 
 ## Renaming the column labels
 After extracting the desired columns from the original dataset, the columns were relabeled such that all punctuation and special characters were removed from the column labels and the text converted to all lower case letters. In addition, the abbreviations "t", "f", "Acc", "Mag", "X", "Y", and "Z" were replaced with "time", "frequency", "acceleration", "magnitude", "xdirection", "ydirection", and "zdirection".
-
-## Description of the column labels and the data they contain
-In the "tidy" dataset,
-- The column subject is a column containing integer values which identify the subject who is conducting a particular activity. Values range from 1:30.
-- The column activity is a column containing strings which indicate which activity the subject was performing when the measurements were taken (i.e., walking, walking upstairs, walking downstairs, sitting, standing, and laying)
-
-The subsequent columns come from the processed data from the accelerometer and gryoscope 3-axial raw signals collected from the smartphone. All data were normalized and are bounded within the range -1 to 1 by the original researchers. Additional details on the features in the original dataset can be found in the `features_info.txt` and `README.txt` files that are included in the downloaded archive. A brief overview of the elements in the column labels is provided below.
-
-The column labels indicate whether the measurement was a "time domain signal" (denoted by "time" in the column label) or a "frequency domain signal" (denoted by "frequency" in the column label). The time domain signals were "captured at a constant rate of 50 Hz" and, per the `features_info.txt` file, "filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise." The frequency domain signals were created by applying a Fast Fourier Transform (FFT) to the signals.
-
-Signals from the accelerometer were generated "from the smartphone accelerometer X axis" and are in "standard gravity units"; these signals are identified by the text "acceleration" in the column label.The "acceleration" signals were separated into "body" and "gravity" signals "using another low pass Butterworth filter with a corner frequency of 0.3 Hz" and by "subtracting gravity from the total acceleration."
-
-Signals from the gyroscope are "angular velocity vectors" that were measured in "radians/second"; these signals are identified by the text "gyro" in the column label. 
-
-The time derivative of the acceleration and gyroscope signals are denoted by the text "jerk" in the column label. The magnitude of the three dimensional "jerk" signals was calculated using the "Euclidian norm"; these signals are denoted by the text "magnitude" in the column label.
-
-The text "mean" and "std" in the column label indicates whether the measurement is the "mean" or the "standard deviation" of the collected data and the text "xdirection", "ydirection", and "zdirection" indicate which of the triaxial signals ("X", "Y", or "Z") the data came from.
-
-As an example, the column labeled timegravityaccelerationmeanzdirection indicates that it is the `mean` of the `time domain signal` derived from the `gravity acceleration` in the `z axial direction`. The column labeled frequencybodygyrojerkmagnitudestd indicates that it is the `standard deviation` of the `frequency domain signal` derived from the `body signal` from the `gyroscope`; to generate the signal in this column, the time derivative of the angular velocity was calculated (`jerk`) and used to calculate the `magnitude` of the jerk signal.
-
-
-
-
-
-
-
-
