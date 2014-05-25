@@ -35,13 +35,13 @@ The data were processed using the R script `run_analysis.R`. The `run_analysis.R
 
 After creating the "tidy" dataset, the script outputs the "tidy" dataset to a tab-delimited text file entitled `accelerometer_data_tidy.txt`.
 
-The `run_analysis.R` script assumes that the data have been downloaded to your R working directory. After unzipping the archive, the script reads the `subject_train.txt`,`y_train.txt`, and `X_train.txt` files into R and combines them into the training dataset. The script then reads the `subject_test.txt`,`y_test.txt`, and `X_test.txt` files into R and combines them into the test dataset. A final column (`datasource`) is added to the both training and test datasets to identify the original source of the data. These two datasets are then combined into a single dataset and the activity names (indices 1 through 6 in the original files) are renamed with the descriptive names listed in the `activity_labels.txt` file. 
+The `run_analysis.R` script assumes that the data have been downloaded to your R working directory. After unzipping the archive, the script reads the `subject_train.txt`,`y_train.txt`, and `X_train.txt` files into R and combines them into the training dataset. The script then reads the `subject_test.txt`,`y_test.txt`, and `X_test.txt` files into R and combines them into the test dataset. A final column ("datasource") is added to the both training and test datasets to identify the original source of the data. These two datasets are then combined into a single dataset and the activity names (indices 1 through 6 in the original files) are renamed with the descriptive names listed in the `activity_labels.txt` file. 
 
 ## Assumptions regarding the Assignment Instructions
 The instructions stated "Extracts only the measurements on the mean and standard deviation for each measurement." It was assumed that this meant that the script was to extract all columns which contained either `mean()` or `std()` in their column id (the values that were stored in the `features.txt` file). Vectors including the term `Mean` in their column id were not included as these measurements were "obtained by averaging the signals in a signal window sample" (as described in the `features_info.txt` file) for the "angle() variable."
 
 ## Renaming the column labels
-After extracting the desired columns from the original dataset, the columns were relabeled such that all punctuation and special characters were removed from the column labels and the text converted to all lower case letters. In addition, the abbreviations "t", "f", "Acc", "Mag", "X", "Y", and "Z" were replaced with "time", "frequency", "acceleration", "magnitude", "xdirection", "ydirection", and "zdirection".
+After extracting the desired columns from the original dataset, the columns were relabeled such that all punctuation and special characters were removed from the column labels and the text converted to all lower case letters. In addition, the abbreviations "t", "f", "Acc", "Mag", "X", "Y", and "Z" were replaced with "time", "frequency", "acceleration", "magnitude", "xdirection", "ydirection", and "zdirection", respectively.
 
 ## Description of the column labels and the data they contain
 In the "tidy" dataset,
@@ -60,7 +60,7 @@ The time derivative of the acceleration and gyroscope signals are denoted by the
 
 The text "mean" and "std" in the column label indicates whether the measurement is the "mean" or the "standard deviation" of the collected data and the text "xdirection", "ydirection", and "zdirection" indicate which of the triaxial signals ("X", "Y", or "Z") the data came from.
 
-As an example, the column labeled timegravityaccelerationmeanzdirection indicates that it is the `mean` of the `time domain signal` derived from the `gravity acceleration` in the `z axial direction`. The column labeled frequencybodygyrojerkmagnitudestd indicates that it is the `standard deviation` of the `frequency domain signal` derived from the `body signal` from the `gyroscope`; to generate the signal in this column, the time derivative of the angular velocity was calculated (`jerk`) and used to calculate the `magnitude` of the jerk signal.
+As an example, the column labeled "timegravityaccelerationmeanzdirection" indicates that it is the "mean" of the "time domain signal" derived from the "gravity acceleration" in the "z axial direction". The column labeled "frequencybodygyrojerkmagnitudestd" indicates that it is the "standard deviation" of the "frequency domain signal" derived from the "body signal" from the "gyroscope"; to generate the signal in this column, the time derivative of the angular velocity was calculated ("jerk") and used to calculate the "magnitude" of the jerk signal.
 
 
 
